@@ -9,4 +9,3 @@ def returnList(oroginalList):
 	return finalList
 
 test=returnList([2,6,4,1,3,5])
-print(test)
