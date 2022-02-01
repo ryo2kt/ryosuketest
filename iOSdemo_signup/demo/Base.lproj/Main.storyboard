@@ -70,7 +70,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userNameTextField" destination="9Up-nJ-dK1" id="YR8-gL-B5k"/>
+                        <outlet property="userEmailTextField" destination="9Up-nJ-dK1" id="0zr-Jo-V0M"/>
                         <outlet property="userPasswordTextField" destination="Qyu-UP-qyL" id="XfX-yf-WRM"/>
                     </connections>
                 </viewController>
@@ -127,7 +127,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax0-4u-QTX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax0-4u-QTX">
                                 <rect key="frame" x="20" y="436" width="374" height="31"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
@@ -136,7 +136,7 @@
                                     <action selector="signUpButtonTapped:" destination="cam-8T-BeU" eventType="touchUpInside" id="Rfe-HI-mfg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZq-om-tfA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZq-om-tfA">
                                 <rect key="frame" x="20" y="480" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
@@ -148,29 +148,29 @@
                         <viewLayoutGuide key="safeArea" id="BB2-KV-Wde"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="trailing" secondItem="sZq-om-tfA" secondAttribute="trailing" id="3bS-mf-T3n"/>
                             <constraint firstItem="WLK-c2-cIL" firstAttribute="leading" secondItem="19e-ge-LpR" secondAttribute="leading" id="5HG-Aa-h1B"/>
                             <constraint firstItem="LgX-t2-wb0" firstAttribute="leading" secondItem="hao-K4-cAs" secondAttribute="leading" id="7Ky-1A-DpM"/>
                             <constraint firstItem="19e-ge-LpR" firstAttribute="trailing" secondItem="LgX-t2-wb0" secondAttribute="trailing" id="Ae5-UB-jN2"/>
                             <constraint firstItem="19e-ge-LpR" firstAttribute="leading" secondItem="LgX-t2-wb0" secondAttribute="leading" id="Frg-Cu-k3K"/>
                             <constraint firstItem="WLK-c2-cIL" firstAttribute="trailing" secondItem="19e-ge-LpR" secondAttribute="trailing" id="GcR-NB-vE3"/>
+                            <constraint firstItem="sZq-om-tfA" firstAttribute="top" secondItem="Ax0-4u-QTX" secondAttribute="bottom" constant="13" id="Lz5-3d-2xE"/>
                             <constraint firstItem="WLK-c2-cIL" firstAttribute="top" secondItem="OQ6-bM-04R" secondAttribute="bottom" constant="9" id="NDw-Y0-qdY"/>
                             <constraint firstItem="OQ6-bM-04R" firstAttribute="top" secondItem="wp4-jV-hE5" secondAttribute="bottom" constant="6" id="OJU-NS-U6Q"/>
                             <constraint firstItem="q1X-5c-dFP" firstAttribute="leading" secondItem="WnS-pV-Gxo" secondAttribute="leadingMargin" id="PBC-S0-hi8"/>
                             <constraint firstItem="KCq-qf-fC3" firstAttribute="trailing" secondItem="q1X-5c-dFP" secondAttribute="trailing" id="SWc-J7-oD8"/>
-                            <constraint firstItem="hao-K4-cAs" firstAttribute="leading" secondItem="Ax0-4u-QTX" secondAttribute="leading" id="Sn4-eo-9S0"/>
+                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="top" secondItem="hao-K4-cAs" secondAttribute="bottom" constant="19" id="T18-aT-GnE"/>
                             <constraint firstItem="KCq-qf-fC3" firstAttribute="leading" secondItem="wp4-jV-hE5" secondAttribute="leading" id="U4u-yc-9aJ"/>
                             <constraint firstItem="wp4-jV-hE5" firstAttribute="leading" secondItem="OQ6-bM-04R" secondAttribute="leading" id="Uah-mG-dXa"/>
+                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="leading" secondItem="sZq-om-tfA" secondAttribute="leading" id="V2p-YW-Ad1"/>
                             <constraint firstItem="wp4-jV-hE5" firstAttribute="trailing" secondItem="OQ6-bM-04R" secondAttribute="trailing" id="Y5k-ex-bpF"/>
-                            <constraint firstItem="sZq-om-tfA" firstAttribute="top" secondItem="Ax0-4u-QTX" secondAttribute="bottom" constant="13" id="Yt9-3y-Hwl"/>
-                            <constraint firstItem="hao-K4-cAs" firstAttribute="trailing" secondItem="Ax0-4u-QTX" secondAttribute="trailing" id="Zlj-N3-pJU"/>
+                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="leading" secondItem="hao-K4-cAs" secondAttribute="leading" id="amq-cv-yxS"/>
                             <constraint firstItem="hao-K4-cAs" firstAttribute="top" secondItem="LgX-t2-wb0" secondAttribute="bottom" constant="18" id="bIv-KO-edn"/>
+                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="trailing" secondItem="hao-K4-cAs" secondAttribute="trailing" id="bSP-o7-Ces"/>
                             <constraint firstItem="q1X-5c-dFP" firstAttribute="trailing" secondItem="WnS-pV-Gxo" secondAttribute="trailingMargin" id="dfP-Vc-fPr"/>
-                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="trailing" secondItem="sZq-om-tfA" secondAttribute="trailing" id="e5K-Oz-Fpg"/>
                             <constraint firstItem="KCq-qf-fC3" firstAttribute="trailing" secondItem="wp4-jV-hE5" secondAttribute="trailing" id="izu-tK-oMx"/>
                             <constraint firstItem="KCq-qf-fC3" firstAttribute="top" secondItem="q1X-5c-dFP" secondAttribute="bottom" constant="24" id="mhF-0B-blo"/>
-                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="leading" secondItem="sZq-om-tfA" secondAttribute="leading" id="n3B-EU-KE3"/>
                             <constraint firstItem="LgX-t2-wb0" firstAttribute="top" secondItem="19e-ge-LpR" secondAttribute="bottom" constant="11" id="qbR-o9-aK0"/>
-                            <constraint firstItem="Ax0-4u-QTX" firstAttribute="top" secondItem="hao-K4-cAs" secondAttribute="bottom" constant="54" id="rad-kC-nEh"/>
                             <constraint firstItem="OQ6-bM-04R" firstAttribute="trailing" secondItem="WLK-c2-cIL" secondAttribute="trailing" id="tHK-Lk-Wnu"/>
                             <constraint firstItem="OQ6-bM-04R" firstAttribute="leading" secondItem="WLK-c2-cIL" secondAttribute="leading" id="wCs-q4-GU4"/>
                             <constraint firstItem="LgX-t2-wb0" firstAttribute="trailing" secondItem="hao-K4-cAs" secondAttribute="trailing" id="y7b-PS-OLh"/>
@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-MZ-WDG">
-                                <rect key="frame" x="0.0" y="44" width="0.0" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Home" id="3bp-MO-gpl">
                                         <barButtonItem key="leftBarButtonItem" title="Sign out" id="SkL-RT-3F1">
