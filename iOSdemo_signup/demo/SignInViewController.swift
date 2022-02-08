@@ -7,15 +7,50 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
+    func displayMessage(userMessage:String) -> Void {
+        DispatchQueue.main.async
+        {
+            let alertController = UIAlertController(title: "Alert", message:userMessage, preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default){ (action:UIAlertAction!)in
+                //Code in this block will trigger when OK button tappled.
+                print("Ok button tapped")
+                DispatchQueue.main.async
+                {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func removeActivityIndicator(activityIndicator: UIActivityIndicatorView){
+    
+        DispatchQueue.main.async {
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    struct User: Codable {
+        let user_id: String
+        let age: String
+        let email: String
+        let height: String
+        let name: String
+        let pass: String
+    }
+    
     @IBAction func signInButtonTapped(_ sender: Any) {
         print("Sign in button tapped")
-        
         
         // Read values from text fields
         let userEmail = userEmailTextField.text
@@ -47,10 +82,6 @@ class SignInViewController: UIViewController {
         let myUrl = URL(string:  "https://0n6on8lv0m.execute-api.us-east-2.amazonaws.com/demo-2?")
         var request = URLRequest(url: myUrl!)
         request.addValue("tFNfJdubc83lzdnwO1sDS5USmFlIfY1x1puJCQ19", forHTTPHeaderField: "x-api-key")
-
-        request.httpMethod = "POST" //Compose a query String
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         let postString = ["userEmail": userEmail!, "userPassword": userPassword!] as [String: String]
         
@@ -61,9 +92,9 @@ class SignInViewController: UIViewController {
             displayMessage(userMessage: "Something went wrong...")
             return
         }
+    
+        URLSession.shared.dataTask(with: request){ (data: Data?, response: URLResponse?, error: Error?) in
         
-        let task = URLSession.shared.dataTask(with: request){ (data: Data?, response: URLResponse?, error: Error?) in
-            
             self.removeActivityIndicator(activityIndicator: myActivityIndicator)
             
             if error != nil{
@@ -71,39 +102,34 @@ class SignInViewController: UIViewController {
                 print("error=\(String(describing: error))")
                 return
             }
+            guard let _data = data else{ return }
         
             // Let's convert response sent from a server side code to a NSDictionary object:
             
             do{
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                let users = try JSONDecoder().decode([User].self, from: _data)
                 
-                if let parseJSON = json {
+                for row in users {
                     
-                    // Now we can access value of First Name by its key
-                    let emailInfo = parseJSON["email"] as? String
-                    let passInfo = parseJSON["pass"] as? String
-                    
-                    if (emailInfo == userEmail) && (passInfo == userPassword)
-                    {
+                    if (userEmail == \row.email && userPassword == \row.pass){
+                       
+                        DispatchQueue.main.async{
+                            let homePage =
+                            self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
+                            let appDelegate = UIApplication.shared.delegate
+                            appDelegate?.window??.rootViewController = homePage
+
                         self.displayMessage(userMessage: "Could not successfully perform this request. Please try again later")
                         return
                     }
-                    
-                    DispatchQueue.main.async
-                    {
-                        let homePage =
-                        self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
-                        let appDelegate = UIApplication.shared.delegate
-                        appDelegate?.window??.rootViewController = homePage
-                    }
-                    
+            
                 } else {
                     // Display an Alert
                     self.displayMessage(userMessage: "Could not successfully perform this request. Please try again later")
                 }
-                
+                    
             } catch {
-                
+    
                 self.removeActivityIndicator(activityIndicator: myActivityIndicator)
                 
                 // Display an Alert dialog with a friendly error message
@@ -111,14 +137,9 @@ class SignInViewController: UIViewController {
                 print(error)
                 
             }
-            
-            
-        
         }
         task.resume()
         
-    }
-    
     
     @IBAction func registerNewAccountButtonTapped(_ sender: Any) {
         print("Register account button tapped")
@@ -129,33 +150,6 @@ class SignInViewController: UIViewController {
         
     }
 
-    func displayMessage(userMessage:String) -> Void {
-        DispatchQueue.main.async
-        {
-            let alertController = UIAlertController(title: "Alert", message:userMessage, preferredStyle: .alert)
-            
-            let OKAction = UIAlertAction(title: "OK", style: .default){ (action:UIAlertAction!)in
-                //Code in this block will trigger when OK button tappled.
-                print("Ok button tapped")
-                DispatchQueue.main.async
-                {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            alertController.addAction(OKAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
     }
-    
-    func removeActivityIndicator(activityIndicator: UIActivityIndicatorView)
-    {
-        DispatchQueue.main.async {
-            activityIndicator.stopAnimating()
-            activityIndicator.removeFromSuperview()
-            
-        }
-    }
-    
-    
 }
-
+}

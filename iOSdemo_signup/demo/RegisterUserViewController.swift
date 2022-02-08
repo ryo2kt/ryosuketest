@@ -105,10 +105,10 @@ class RegisterUserViewController: UIViewController {
                 
                 if let parseJSON = json {
                     
-                    let userId = parseJSON["userId"] as? String
-                    print("User id: \(String(describing: userId!))")
+                    let user_id = parseJSON["user_id"] as? String
+                    print("user_id: \(String(describing: user_id!))")
                     
-                    if (userId?.isEmpty)!
+                    if (user_id?.isEmpty)!
                     {
                         //Display an alert dialog with a friendly error message
                         self.displayMessage(userMessage: "Could not successfully perform this request. Please try again later")
