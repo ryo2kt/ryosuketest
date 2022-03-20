@@ -62,7 +62,7 @@ class RegisterUserViewController: UIViewController {
         
         request.httpBody = try! JSONSerialization.data(withJSONObject: postString, options: [])
         URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let d = data, let s = String(data: d, encoding: .utf8) else { return }
+            guard let d = data, let s_ = String(data: d, encoding: .utf8) else { return }
         }.resume()
         
         displayMessage(userMessage: "Successfully Registered a New Account")
