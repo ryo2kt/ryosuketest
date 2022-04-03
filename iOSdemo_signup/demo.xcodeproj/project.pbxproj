@@ -20,9 +20,25 @@
 		FD3E1C5327C609F900032539 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E1C5227C609F900032539 /* ChatListViewController.swift */; };
 		FD99ED8827B2681000BDC423 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD99ED8727B2681000BDC423 /* user.swift */; };
 		FDB5AFB427CE647600B332AE /* ChatTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5AFB327CE647600B332AE /* ChatTextViewController.swift */; };
+		FDB8984927ED862A007CFFB4 /* MeetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8984827ED862A007CFFB4 /* MeetupViewController.swift */; };
+		FDB8984A27ED8841007CFFB4 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F315052D45E8C813A431445 /* Pods_demo.framework */; };
+		FDB8984B27ED8841007CFFB4 /* Pods_demo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F315052D45E8C813A431445 /* Pods_demo.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FDBBA1D527CE971000B711E9 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBA1D427CE971000B711E9 /* Items.swift */; };
-		FECAB27A12D72E349841FD40 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F315052D45E8C813A431445 /* Pods_demo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDB8984C27ED8841007CFFB4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDB8984B27ED8841007CFFB4 /* Pods_demo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		305677A068CB1ECB566CA149 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -43,6 +59,7 @@
 		FD3E1C5227C609F900032539 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		FD99ED8727B2681000BDC423 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		FDB5AFB327CE647600B332AE /* ChatTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTextViewController.swift; sourceTree = "<group>"; };
+		FDB8984827ED862A007CFFB4 /* MeetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupViewController.swift; sourceTree = "<group>"; };
 		FDBBA1D427CE971000B711E9 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FECAB27A12D72E349841FD40 /* Pods_demo.framework in Frameworks */,
+				FDB8984A27ED8841007CFFB4 /* Pods_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,23 +113,32 @@
 		FD1C27DA27A813910021E07A /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				FDBBA1D427CE971000B711E9 /* Items.swift */,
+				FD3E1C5027C604BC00032539 /* ChatList.storyboard */,
+				FD3E1C5227C609F900032539 /* ChatListViewController.swift */,
+				FDB5AFB327CE647600B332AE /* ChatTextViewController.swift */,
 				FD1C27DB27A813910021E07A /* AppDelegate.swift */,
 				FD1C27DD27A813910021E07A /* SceneDelegate.swift */,
 				FD1C27DF27A813910021E07A /* ViewController.swift */,
-				FD3E1C5027C604BC00032539 /* ChatList.storyboard */,
-				FD1C27E127A813910021E07A /* Main.storyboard */,
-				FD3E1C5227C609F900032539 /* ChatListViewController.swift */,
-				FD1C27F327A820440021E07A /* HomePageViewController.swift */,
-				FDB5AFB327CE647600B332AE /* ChatTextViewController.swift */,
-				FD1C27EF27A81CAA0021E07A /* SignInViewController.swift */,
-				FD99ED8727B2681000BDC423 /* user.swift */,
+				FDB8984627ED8582007CFFB4 /* Function l */,
 				FD1C27E427A813940021E07A /* Assets.xcassets */,
 				FD1C27E627A813940021E07A /* LaunchScreen.storyboard */,
 				FD1C27E927A813940021E07A /* Info.plist */,
-				FD1C27F127A81E3A0021E07A /* RegisterUserViewController.swift */,
 			);
 			path = demo;
+			sourceTree = "<group>";
+		};
+		FDB8984627ED8582007CFFB4 /* Function l */ = {
+			isa = PBXGroup;
+			children = (
+				FD1C27E127A813910021E07A /* Main.storyboard */,
+				FDBBA1D427CE971000B711E9 /* Items.swift */,
+				FD99ED8727B2681000BDC423 /* user.swift */,
+				FD1C27EF27A81CAA0021E07A /* SignInViewController.swift */,
+				FD1C27F127A81E3A0021E07A /* RegisterUserViewController.swift */,
+				FD1C27F327A820440021E07A /* HomePageViewController.swift */,
+				FDB8984827ED862A007CFFB4 /* MeetupViewController.swift */,
+			);
+			path = "Function l";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +152,7 @@
 				FD1C27D427A813910021E07A /* Sources */,
 				FD1C27D527A813910021E07A /* Frameworks */,
 				FD1C27D627A813910021E07A /* Resources */,
+				FDB8984C27ED8841007CFFB4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +245,7 @@
 				FD3E1C5327C609F900032539 /* ChatListViewController.swift in Sources */,
 				FDB5AFB427CE647600B332AE /* ChatTextViewController.swift in Sources */,
 				FD1C27F427A820440021E07A /* HomePageViewController.swift in Sources */,
+				FDB8984927ED862A007CFFB4 /* MeetupViewController.swift in Sources */,
 				FD1C27E027A813910021E07A /* ViewController.swift in Sources */,
 				FDBBA1D527CE971000B711E9 /* Items.swift in Sources */,
 				FD99ED8827B2681000BDC423 /* user.swift in Sources */,
@@ -373,6 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JG2U83Q7NU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -401,6 +430,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JG2U83Q7NU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

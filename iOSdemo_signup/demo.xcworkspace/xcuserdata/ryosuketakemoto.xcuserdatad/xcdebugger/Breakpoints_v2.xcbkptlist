@@ -96,7 +96,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "85">
+                  offsetFromSymbolStart = "88">
                </Location>
                <Location
                   uuid = "4FB2E2F3-11D4-47E8-AA49-B38C0EED9A20 - c6d28796ca924fc7"
@@ -111,10 +111,10 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "136">
+                  offsetFromSymbolStart = "108">
                </Location>
                <Location
-                  uuid = "4FB2E2F3-11D4-47E8-AA49-B38C0EED9A20 - 30631f371b458620"
+                  uuid = "4FB2E2F3-11D4-47E8-AA49-B38C0EED9A20 - 30631f371b4584d0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -124,9 +124,9 @@
                   urlString = "file:///Users/ryosuketakemoto/Desktop/Development/iOSdemo_signup/demo/ChatListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "52">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
                </Location>
                <Location
                   uuid = "4FB2E2F3-11D4-47E8-AA49-B38C0EED9A20 - b5ae6db06caf3fc7"
@@ -141,7 +141,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "26">
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
                   uuid = "4FB2E2F3-11D4-47E8-AA49-B38C0EED9A20 - e0eb3c9cd0874a4e"
@@ -156,7 +156,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "188">
+                  offsetFromSymbolStart = "144">
                </Location>
                <Location
                   uuid = "4FB2E2F3-11D4-47E8-AA49-B38C0EED9A20 - 53a49ee51f432020"
@@ -171,7 +171,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "145">
+                  offsetFromSymbolStart = "120">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -298,6 +298,22 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "fetchChatDataByAPIGetTextInChatRoom()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43917089-CBE1-4E11-A474-3A6CD54D7586"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "demo/Function l/MeetupViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "actionPer10Seconds(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
